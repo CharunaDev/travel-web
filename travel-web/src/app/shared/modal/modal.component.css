@@ -1,0 +1,11 @@
+.modal-trigger-wrapper {
+  position: relative; /* Make the wrapper element a positioning context */
+}
+
+.app-modal {
+  position: absolute; /* Make the modal absolute positioned */
+  top: 100%; /* Position the modal below the button */
+  left: 0; /* Align the modal with the left edge of the button */
+  transform: translateX(-50%); /* Center the modal horizontally */
+  z-index: 1; /* Ensure the modal is on top of other elements */
+}

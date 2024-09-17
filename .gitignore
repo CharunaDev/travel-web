@@ -1,0 +1,33 @@
+# .NET Core 6 Web API (travel-api)
+travel-api/travel-api/bin/
+travel-api/travel-api/obj/
+travel-api/travel-api/*.user
+travel-api/travel-api/*.suo
+travel-api/travel-api/*.userosscache
+travel-api/travel-api/*.sln.docstates
+travel-api/travel-api/publish/
+travel-api/travel-api/.vscode/
+travel-api/travel-api/.vs/
+travel-api/travel-api/.idea/
+travel-api/travel-api/*.sln.iml
+travel-api/travel-api/packages/
+travel-api/travel-api/*.log
+travel-api/travel-api/*.cache
+travel-api/travel-api/appsettings.Development.json
+travel-api/travel-api/appsettings.local.json
+
+# Angular (travel-web)
+travel-web/node_modules/
+travel-web/dist/
+travel-web/build/
+travel-web/src/environments/environment*.ts
+travel-web/npm-debug.log*
+travel-web/yarn-debug.log*
+travel-web/yarn-error.log*
+travel-web/.DS_Store
+travel-web/.idea/
+travel-web/.vscode/
+travel-web/coverage/
+travel-web/*.log
+travel-web/*.tmp
+travel-web/.angular/

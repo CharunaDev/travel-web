@@ -1,0 +1,17 @@
+<div
+  class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center"
+  *ngIf="isVisible"
+>
+  <div class="bg-white p-6 rounded-md w-full max-w-md">
+    <h2 class="text-xl font-semibold mb-4">{{ modalTitle }}</h2>
+    <div class="modal-content">
+      <ng-content></ng-content>
+    </div>
+    <button
+      class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500"
+      (click)="closeModal()"
+    >
+      Close
+    </button>
+  </div>
+</div>

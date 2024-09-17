@@ -1,0 +1,88 @@
+<nav
+  class="block w-full max-w-screen-lg px-4 py-2 mx-auto text-white bg-white shadow-md rounded-md lg:px-8 lg:py-3 mt-10"
+>
+  <div
+    class="container flex flex-wrap items-center justify-between mx-auto text-slate-800"
+  >
+    <!-- Left Side: Travel Web Logo and Text aligned horizontally -->
+    <a
+      href="#"
+      class="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold flex items-center"
+    >
+      <img src="/assets/icons/travel.png" alt="Logo" class="w-6 h-6 mr-2" />
+      <span>Travel Web</span>
+    </a>
+
+    <!-- Center: Navigation Links -->
+    <div class="ml-auto mr-auto hidden lg:block">
+      <ul
+        class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6"
+      >
+        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+          <a
+            href="#"
+            class="flex items-center hover:text-blue-600 transition-colors"
+            >Home</a
+          >
+        </li>
+        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+          <a
+            href="#"
+            class="flex items-center hover:text-blue-600 transition-colors"
+            >Destinations</a
+          >
+        </li>
+        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+          <a
+            href="#"
+            class="flex items-center hover:text-blue-600 transition-colors"
+            >Hotels</a
+          >
+        </li>
+        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+          <a
+            href="#"
+            class="flex items-center hover:text-blue-600 transition-colors"
+            >Why Us</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right Side: Icons -->
+    <div class="flex items-center gap-4 lg:ml-auto">
+      <!-- Notification Bell Icon -->
+      <a
+        href="#"
+        class="relative hover:text-blue-600 transition-colors"
+        (click)="openModal('notifications')"
+      >
+        <i class="fas fa-bell text-slate-600"></i>
+        <span
+          class="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"
+        ></span>
+      </a>
+
+      <!-- Profile Icon -->
+      <a
+        href="#"
+        class="relative hover:text-blue-600 transition-colors"
+        (click)="openModal('profile')"
+      >
+        <i class="fas fa-user text-slate-600"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Reusable Modal Component for Notifications -->
+<app-modal #modalComponent>
+  <ng-container *ngIf="currentModal === 'notifications'">
+    <h3>Notifications</h3>
+    <p>Your notification details go here...</p>
+  </ng-container>
+  <ng-container *ngIf="currentModal === 'profile'">
+    <h3>Profile</h3>
+    <p>Your profile details go here...</p>
+  </ng-container>
+</app-modal>
