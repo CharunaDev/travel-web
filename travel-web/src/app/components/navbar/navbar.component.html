@@ -18,71 +18,53 @@
       <ul
         class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6"
       >
-        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-          <a
-            href="#"
-            class="flex items-center hover:text-blue-600 transition-colors"
-            >Home</a
-          >
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
         </li>
-        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-          <a
-            href="#"
-            class="flex items-center hover:text-blue-600 transition-colors"
-            >Destinations</a
-          >
+        <li class="nav-item">
+          <a href="#" class="nav-link">Destinations</a>
         </li>
-        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-          <a
-            href="#"
-            class="flex items-center hover:text-blue-600 transition-colors"
-            >Hotels</a
-          >
+        <li class="nav-item">
+          <a href="#" class="nav-link">Hotels</a>
         </li>
-        <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-          <a
-            href="#"
-            class="flex items-center hover:text-blue-600 transition-colors"
-            >Why Us</a
-          >
+        <li class="nav-item">
+          <a href="#" class="nav-link">Why Us</a>
         </li>
       </ul>
     </div>
 
-    <!-- Right Side: Icons -->
+    <!-- Right Side: Icons with Dropdown Menus -->
     <div class="flex items-center gap-4 lg:ml-auto">
-      <!-- Notification Bell Icon -->
-      <a
-        href="#"
-        class="relative hover:text-blue-600 transition-colors"
-        (click)="openModal('notifications')"
-      >
-        <i class="fas fa-bell text-slate-600"></i>
-        <span
-          class="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"
-        ></span>
-      </a>
+      <!-- Notification Bell Icon with Dropdown -->
+      <div class="dropdown-group">
+        <a href="#" class="relative hover:text-blue-600 transition-colors">
+          <i class="fas fa-bell text-slate-600"></i>
+          <span
+            class="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"
+          ></span>
+        </a>
+        <div class="dropdown-menu">
+          <h3>Notifications</h3>
+          <ul>
+            <li><i class="fas fa-cog"></i> Settings</li>
+            <li><i class="fas fa-sign-in-alt"></i> Sign In</li>
+          </ul>
+        </div>
+      </div>
 
-      <!-- Profile Icon -->
-      <a
-        href="#"
-        class="relative hover:text-blue-600 transition-colors"
-        (click)="openModal('profile')"
-      >
-        <i class="fas fa-user text-slate-600"></i>
-      </a>
+      <!-- Profile Icon with Dropdown -->
+      <div class="dropdown-group">
+        <a href="#" class="relative hover:text-blue-600 transition-colors">
+          <i class="fas fa-user text-slate-600"></i>
+        </a>
+        <div class="dropdown-menu">
+          <h3>Profile</h3>
+          <ul>
+            <li><i class="fas fa-cog"></i> Settings</li>
+            <li><i class="fas fa-sign-in-alt"></i> Sign In</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
-
-<!-- Reusable Modal Component for Notifications -->
-<app-modal #modalComponent>
-  <ng-container *ngIf="currentModal === 'notifications'">
-    <h3>Notifications</h3>
-    <p>Your notification details go here...</p>
-  </ng-container>
-  <ng-container *ngIf="currentModal === 'profile'">
-    <h3>Profile</h3>
-    <p>Your profile details go here...</p>
-  </ng-container>
-</app-modal>

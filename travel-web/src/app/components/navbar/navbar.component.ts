@@ -10,10 +10,21 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  currentModal: string = '';
-  @ViewChild('modalComponent') modalComponent!: ModalComponent;
-  openModal(type: string) {
-    this.currentModal = type;
-    this.modalComponent.openModal();
+  // currentModal: string = '';
+  // @ViewChild('modalComponent') modalComponent!: ModalComponent;
+  // openModal(type: string) {
+  //   this.currentModal = type;
+  //   this.modalComponent.openModal();
+  // }
+
+  isDropdownOpen: string | null = null;
+
+  toggleDropdown(type: string) {
+    // Toggle the dropdown for notifications or profile
+    if (this.isDropdownOpen === type) {
+      this.isDropdownOpen = null;
+    } else {
+      this.isDropdownOpen = type;
+    }
   }
 }

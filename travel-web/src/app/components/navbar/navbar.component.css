@@ -1,0 +1,82 @@
+/* Navbar item hover effect */
+.nav-item {
+  position: relative;
+  padding: 5px;
+}
+
+.nav-link {
+  display: block;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px; /* Rounded edges for the hover effect */
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+  background-color: #e2e8f0; /* Light gray background on hover */
+  color: #1d4ed8; /* Blue text color on hover */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Notification and Profile dropdown hover effect */
+.dropdown-group {
+  position: relative;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px); /* Slide up effect */
+  transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 0;
+  top: 100%; /* Position the dropdown below the icon */
+  margin-top: 8px;
+  width: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  z-index: 100;
+}
+
+/* Dropdown content styling */
+.dropdown-menu h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1d4ed8; /* Blue header text */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  font-size: 14px;
+  color: #4a5568; /* Gray text */
+  padding: 6px 0;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu ul li:hover {
+  color: #1d4ed8; /* Blue text on hover */
+}
+
+.dropdown-menu i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Ensure the dropdown stays visible when hovering over it */
+.dropdown-group:hover .dropdown-menu,
+.dropdown-menu:hover {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
